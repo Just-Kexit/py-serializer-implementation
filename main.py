@@ -11,6 +11,7 @@ def serialize_car_object(car: Car) -> bytes:
     json = JSONRenderer().render(serializer.data)
     return json
 
+
 def deserialize_car_object(json: bytes) -> Car:
     stream = io.BytesIO(json)
     data = JSONParser().parse(stream)
